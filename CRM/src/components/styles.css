@@ -1,0 +1,334 @@
+/* Container layout */
+
+.container1 {
+    display: flex;
+    height: 100vh;
+    background-color: white;
+    width: 100vh;
+ 
+}
+
+/* Sidebar */
+.createsidebar {
+    width: 15%;
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+}
+.createsidebar h2{
+    color: white;
+}
+
+/* Sidebar Item Styling */
+.sidebar-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: left; /* Align text to the left */
+}
+
+.section-label {
+    margin: 5px 0; /* Adjust margin for a better layout */
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.subsection {
+    margin-left: 0; /* Remove left margin for subsections */
+    list-style: none;
+    padding-left: 0; /* Remove left padding */
+}
+
+.sub-item {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    margin-left: 0; /* Remove left margin */
+}
+
+.sub-item label {
+    margin-left: 0; /* Remove left margin for labels */
+    color: #ddd;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin-left: 5%; /* Adjusted to match the sidebar width */
+    overflow-y: auto;
+   
+}
+
+.form-container1 {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+   
+}
+
+.form-subsection {
+    margin-bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.form-subsection h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.input-field-container1 {
+    margin-bottom: 10px;
+    width: 90%;
+}
+.input-field-container1 h4{
+    margin-left: -310px;
+}
+
+.input-field {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    
+}
+/* Submit Button Styling */
+.submit-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding around the text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    margin-top: 15px; /* Space above the button */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover Effect */
+.submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* Back Button (Upper Left in Sidebar) */
+.back-button {
+    background-color: #ff4d4d; /* Red color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.back-button:hover {
+    background-color: #cc0000;
+}
+
+/* Create Form Button (Upper Right in Form Section) */
+.create-form-button {
+    position: absolute;
+    top: 20px;  /* Adjust to align properly */
+    right: 20px; /* Adjust to align properly */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10; /* Ensures it stays above other elements */
+    margin-right: 10px;
+}
+
+.create-form-button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjust Form Section */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin-left: 5%;
+    position: relative; /* Required for absolute positioning of the button */
+    min-height: 100vh; /* Ensures full page height */
+}
+
+
+/* Submit Button */
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Adjust Form Section to allow positioning of the create button */
+.form-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px;
+    margin-left: 5%;
+    position: relative; /* Needed for absolute positioning of the create button */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 30%; /* Increase sidebar width for smaller screens */
+    }
+
+    .form-section {
+        margin-left: 30%; /* Adjust form section to fit */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50%; /* Decrease sidebar width for mobile */
+    }
+
+    .form-section {
+        margin-left: 50%; /* Align form section */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .form-container1 {
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* Full width for mobile */
+        position: relative; /* Remove fixed position */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .form-section {
+        margin-left: 0; /* Remove margin for mobile */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .form-container1 {
+        padding: 10px; /* Adjust padding */
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-box {
+    background: white;
+    padding: 20px;
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .popup-content {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+  }
+  
+  .popup-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .popup-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .popup-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .submit-btn1 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .top-right-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }

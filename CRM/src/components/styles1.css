@@ -1,0 +1,601 @@
+/* General Page Layout */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 90vw;
+    background-image: url("../image/forlogin.jpg");
+    position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 13%;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    background-color: #34495e;
+    margin-top: 60px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar-button:hover {
+    background-color: #1abc9c;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Form Container Styles */
+.form-container {
+    max-width: 800px; /* Set a maximum width for larger screens */
+    width: 100%; /* Allow it to be responsive */
+    height: 600px; /* Fixed height for uniformity across tabs */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add padding for space inside the container */
+    background-color: #ffffff; /* Set a white background for clarity */
+    border: 1px solid #ccc; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%; /* Full width */
+    padding: 12px; /* Add padding for comfort */
+    margin: 10px 0; /* Space between fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for readability */
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+/* Input Field Focus State */
+.input-field:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 12px 20px; /* Padding for comfort */
+    margin-top: 15px; /* Space above the button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+/* Submit Button Hover State */
+.submit-button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+}
+.tabs {
+    
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased gap between tab buttons */
+    margin-bottom: 20px;
+}
+
+.tab-button{
+    padding: 6px;
+    font-size:20px;
+    margin-top: 26px;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: stretch; /* Make children elements fill the width */
+    padding: 20px; /* Add padding for space around the content */
+    border: 1px solid #ccc; /* Light border around tab content */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color for visibility */
+    margin-top: 10px; /* Space above the tab content */
+}
+
+/* Form Subsection Styles */
+.form-subsection {
+    margin-bottom: 20px; /* Space between subsections */
+    padding: 15px; /* Padding for each subsection */
+    background-color: #ffffff; /* White background for each form section */
+    border: 1px solid #ddd; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Section Header Styles */
+.form-subsection h3 {
+    font-size: 20px; /* Header font size */
+    margin-bottom: 10px; /* Space below the header */
+    color: #2c3e50; /* Dark color for text */
+}
+
+/* Input Field Container */
+.input-field-container {
+    margin-bottom: 15px; /* Space below each input field */
+    width: 90%;
+}
+
+/* Input Field Labels */
+.input-field-container h4 {
+    font-size: 16px; /* Font size for input labels */
+    color: #34495e; /* Color for label text */
+    margin-bottom: 5px; /* Space below the label */
+    margin-left: -450px;
+}
+
+/* Table Container */
+.table-container {
+    max-height: 670px; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-left: 155px;
+ 
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow-x: auto; /* Enable scrolling on small screens */
+}
+
+/* Table Styles */
+.leads-table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    table-layout: auto; /* Adjust column widths based on content */
+}
+
+/* Header Styles */
+.leads-table thead {
+    position: sticky;
+    top: 0;
+    background: #2c3e50;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    z-index: 2;
+}
+
+.leads-table th {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Body Styles */
+.leads-table td {
+    padding: 8px 12px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/* Right-align Numeric Columns */
+.leads-table td.numeric {
+    text-align: right;
+}
+
+/* Row Height Adjustment */
+.leads-table tr {
+    height: 30px;
+}
+
+/* Alternating Row Colors */
+.leads-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Hover Effect */
+.leads-table tbody tr:hover {
+    background: #d7e3fc;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .form-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .tab-content {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .form-subsection {
+        padding: 10px; /* Adjust padding for subsections */
+    }
+
+    .form-subsection h3 {
+        font-size: 18px; /* Adjust header size */
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Form Adjustments */
+    .form-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .input-field {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Table Adjustments */
+    .leads-table th,
+    .leads-table td {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    .table-wrapper {
+        padding: 5px;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar on mobile */
+        height: auto; /* Height adjusts automatically */
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin for mobile */
+        width: 100%; /* Full width for main content */
+        padding: 15px; /* Add padding for spacing */
+        text-align: center; /* Center content for mobile */
+    }
+
+    /* Form Adjustments */
+    .form-container {
+        width: 95%; /* Use most of the screen width */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 15px; /* Adjust padding for mobile */
+        margin: 10px auto; /* Center the container with margin */
+        background-color: #ffffff; /* Ensure background is white */
+        border: 1px solid #ccc; /* Light border for definition */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+        
+    }
+
+    /* Tab Button Adjustments */
+    .tabs {
+        
+        flex-direction: row; /* Keep tabs in a row */
+        justify-content: space-between; /* Distribute space evenly */
+        gap: 10px; /* Reduced gap between tab buttons */
+        margin-bottom: 15px; /* Margin below tabs */
+    }
+
+    .tab-button {
+        padding: 8px; /* Adjust button padding */
+        font-size: 16px; /* Slightly smaller font size */
+        flex: 1; /* Allow buttons to take equal width */
+    }
+
+    /* Tab Content Styles */
+    .tab-content {
+        padding: 15px; /* Maintain padding for tab content */
+        border: 1px solid #ccc; /* Light border around tab content */
+        border-radius: 8px; /* Rounded corners */
+        background-color: #f9f9f9; /* Light background color for visibility */
+        margin-top: 10px; /* Space above the tab content */
+    }
+
+    /* Input Field Adjustments */
+    .input-field {
+        width: 100%; /* Full width for input fields */
+        padding: 12px; /* Comfortable padding */
+        margin: 10px 0; /* Space between fields */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 14px; /* Font size for readability */
+    }
+
+    /* Submit Button Adjustments */
+    .submit-button {
+        width: 100%; /* Full width for button */
+        padding: 12px; /* Comfortable padding */
+        margin-top: 15px; /* Space above the button */
+        background-color: #007bff; /* Primary button color */
+        color: white; /* Text color */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s; /* Smooth transition for hover */
+    }
+
+    /* Table Adjustments */
+    .leads-table th,
+    .leads-table td {
+        padding: 6px 8px; /* Adjust padding for table cells */
+        font-size: 12px; /* Smaller font size for table */
+    }
+
+    /* Ensure Table is Responsive */
+    .table-wrapper {
+        padding: 5px; /* Maintain padding */
+        width: 100%; /* Full width for table wrapper */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+}
+
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #34495e; /* Navbar background color */
+    color: white; /* Text color */
+    padding: 15px; /* Padding for the navbar */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    z-index: 1000; /* Ensure it stays above other elements */
+    height: 30px; /* Increased height for better layout */
+}
+
+.navbar-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    max-width: 90vw; /* Limit width */
+    margin: auto; /* Center the navbar */
+    height: 30px; /* Full height */
+}
+
+/* Search Container Styles */
+.search-container {
+    margin-left: 165px;
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between search bar and button */
+}
+
+.search-bar {
+    padding: 8px; /* Padding for the search bar */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border with transparency */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 200px; /* Fixed width */
+    background-color: transparent; /* Transparent background */
+    color: white; /* Text color */
+}
+
+.search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder text color with transparency */
+}
+
+/* Search Button Styles */
+.search-button {
+    padding: 8px 12px; /* Padding for the button */
+    background-color: transparent; /* Transparent background */
+    color: white; /* Button text color */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border with transparency */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.search-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly darken background on hover */
+    color: #1abc9c; /* Change text color on hover */
+}
+
+/* Icon Button Styles */
+/* Icon Button Styles */
+.navbar-icons {
+    display: flex; /* Flexbox for icons */
+    align-items: center; /* Center vertically */
+    gap: 15px; /* Space between icons */
+}
+
+.icon-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: white; /* Default icon color */
+    font-size: 20px; /* Icon size */
+    cursor: pointer; /* Pointer cursor */
+    transition: color 0.3s; /* Transition for hover */
+}
+
+.icon-button:hover {
+    color: #1abc9c; /* Change icon color on hover to white */
+}
+
+/* Specific Icon Styles if using Font Awesome */
+.icon-button i {
+    color: inherit; /* Ensure the icon color inherits from the button color */
+}
+
+
+
+/* Navbar Button Styles */
+.navbar-buttons {
+    display: flex; /* Flexbox for buttons */
+    gap: 15px; /* Space between buttons */
+}
+
+.upgrade-button,
+.copilot-button,
+.sign-out-button {
+    padding: 8px 12px; /* Padding for buttons */
+    background-color: #1abc9c; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for hover */
+}
+
+.upgrade-button:hover,
+.copilot-button:hover,
+.sign-out-button:hover {
+    background-color: #1abc9c; /* Darken on hover */
+}
+
+/* Adjust the main content to avoid overlap with the navbar */
+.main-content {
+    padding-top: 60px; /* Add padding to account for the fixed navbar */
+}
+
+
+
+/* styles1.css */
+
+/* Tabs styling */
+.tabs1 {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px; /* Add some space below the tabs */
+    position: sticky; /* Make tabs sticky */
+    top: 0; /* Stick to the top of the container */
+    background-color: white; /* Ensure the background covers any underlying content */
+    z-index: 10; /* Keep it above the table content */
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  /* Table container styling */
+  .table-container {
+    max-height: 900px; /* Adjust the height as needed */
+    overflow-y: auto; /* Add a vertical scrollbar only for the table */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    margin-top: 10px; /* Add some space between tabs and table */
+  }
+  
+  /* Sticky table header */
+  .leads-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .leads-table th {
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Sticks the header to the top of the container */
+    background-color: #f2f2f2; /* Header background color */
+    z-index: 10; /* Ensure it stays above the other content */
+    padding: 10px; /* Add padding for better spacing */
+    border: 1px solid #ccc; /* Border for the header cells */
+  }
+  
+  /* Table cell styles */
+  .leads-table th,
+  .leads-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  /* Ensure the body has a scrollable area */
+  .leads-table tbody {
+    display: block;
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto; /* Enable scrolling for the body only */
+  }
+  
+  .leads-table tr {
+    display: table;
+    table-layout: fixed; /* Fix layout to avoid overflow */
+    width: 100%; /* Make sure it fits the container */
+  }
+  
+
+
+
+
+
